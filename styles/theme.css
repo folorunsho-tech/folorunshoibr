@@ -1,0 +1,49 @@
+.light .cta {
+  background-color: #000000;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border: 1px solid transparent;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.light .cta:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+.light .nav-menu li {
+  border-bottom: 2px solid transparent;
+  padding: 16px 0px;
+}
+.light .nav-menu li:hover {
+  border-bottom: 2px solid #000000;
+}
+.light .nav-menu .active {
+  border-bottom: 2px solid #000000;
+}
+
+.dark .cta {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border: 1px solid #f5f5f5;
+  color: #000000;
+  transition: all 0.2s ease-in-out;
+}
+.dark .cta:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.dark .nav-menu li {
+  border-bottom: 2px solid transparent;
+  padding: 16px 0px;
+}
+.dark .nav-menu li:hover {
+  border-bottom: 2px solid #ffffff;
+}
+.dark .nav-menu .active {
+  border-bottom: 2px solid #ffffff;
+}/*# sourceMappingURL=theme.css.map */

@@ -1,0 +1,69 @@
+$black: #000000;
+$white: #ffffff;
+$gray-darker: #f5f5f5;
+
+//light theme starts here
+
+.light {
+  .cta {
+    background-color: $black;
+    border-radius: 24px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    border: 1px solid transparent;
+    color: $white;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $white;
+      color: $black;
+      border: 1px solid $black;
+    }
+  }
+  .nav-menu {
+    li {
+      border-bottom: 2px solid transparent;
+      padding: 16px 0px;
+      &:hover {
+        border-bottom: 2px solid $black;
+      }
+    }
+    .active {
+      border-bottom: 2px solid $black;
+    }
+  }
+}
+
+// light theme ends here
+
+// Dark theme starts here
+
+.dark {
+  .cta {
+    background-color: $white;
+    border-radius: 24px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    border: 1px solid $gray-darker;
+    color: $black;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $black;
+      color: $white;
+      border: 1px solid $white;
+    }
+  }
+  .nav-menu {
+    li {
+      border-bottom: 2px solid transparent;
+      padding: 16px 0px;
+      &:hover {
+        border-bottom: 2px solid $white;
+      }
+    }
+    .active {
+      border-bottom: 2px solid $white;
+    }
+  }
+}
+
+//Dark theme ends here

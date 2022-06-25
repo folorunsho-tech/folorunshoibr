@@ -1,0 +1,25 @@
+{
+  "name": "Folorunsho Ibrahim",
+  "description": "Tech enthusiast, Web developer, Software engineer",
+  "profileImg": "/images/profileImg.jpg",
+  "socials": [
+    {
+      "name": "Github",
+      "url": "https://github.com/folorunsho-tech/",
+      "icon": "fa-github",
+      "username": "folorunsho-tech"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/tacheyontechs",
+      "icon": "fa-twitter",
+      "username": "@tacheyontechs"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/folorunsho-ibrahim-t/",
+      "icon": "fa-linkedin",
+      "username": "Folorunsho Ibrahim Babatunde"
+    }
+  ]
+}
