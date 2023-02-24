@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Advice Generator",
+    "img": {
+      "main": "/projects/advice-gen/main.png"
+    },
+    "tags": ["Vue Js", "CSS"],
+    "link": "https://advice-jen.netlify.app/"
+  },
+  {
+    "name": "Social Media Dashboard",
+    "img": {
+      "main": "/projects/social-dash/main.png"
+    },
+    "tags": ["HTML", "CSS", "Javascript"],
+    "link": "https://social-card-d.netlify.app/"
+  },
+  {
+    "name": "Static Job Listing Website",
+    "img": {
+      "main": "/projects/static-job/main.png"
+    },
+    "tags": ["Vue Js", "Tailwind CSS"],
+    "link": "https://static-listing.netlify.app/"
+  }
+]
