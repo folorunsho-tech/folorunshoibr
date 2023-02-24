@@ -4,9 +4,7 @@ import projects from "../../projects.json";
 type Data = {
   name: string;
   img: {
-    mobile: string;
-    tablet: string;
-    desktop: string;
+    main: string;
   };
   link: string;
   tags: string[];
