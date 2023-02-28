@@ -23,10 +23,11 @@ type ProjectCardProps = {
   name: string;
   tags: string[];
   link: string;
+  category: string;
 };
-const ProjectCard = ({ img, name, tags, link }: ProjectCardProps) => {
+const ProjectCard = ({ img, name, tags, link, category }: ProjectCardProps) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       <Image
         src={img?.main}
         alt={name}
@@ -42,13 +43,24 @@ const ProjectCard = ({ img, name, tags, link }: ProjectCardProps) => {
           <span>{tag}</span>
         ))}
       </p>
-      <Link
-        href={link}
-        target="_blank"
-        className={`${oswald.className} text-xl pb-2 uppercase border-b border-b-purple-500 hover:border-b-purple-700 transition duration-150`}
-      >
-        View Project
-      </Link>
+      <div className="flex items-center gap-12 pb-3">
+        <Link
+          href={link}
+          target="_blank"
+          className={`${oswald.className} text-xl pb-2 uppercase border-b border-b-purple-500 hover:border-b-purple-700 transition duration-150`}
+        >
+          View Project
+        </Link>
+        {category === "web development" && (
+          <Link
+            href={link}
+            target="_blank"
+            className={`${oswald.className} text-xl pb-2 uppercase border-b border-b-purple-500 hover:border-b-purple-700 transition duration-150`}
+          >
+            View Code
+          </Link>
+        )}
+      </div>
     </div>
   );
 };

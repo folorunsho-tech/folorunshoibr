@@ -28,6 +28,7 @@ const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 export default function Home() {
   const route = useRouter().asPath;
   const { data, error, isLoading } = useSWR("/api/projects", fetcher);
+  console.log(data);
 
   return (
     <>
@@ -156,8 +157,12 @@ export default function Home() {
             </>
           )}
           {!isLoading &&
-            data.map((project: any) => (
-              <ProjectCard key={project?.name} {...project} />
+            data[0].projects?.map((project: any) => (
+              <ProjectCard
+                key={project?.name}
+                {...project}
+                category={data[0].category}
+              />
             ))}
         </section>
       </main>

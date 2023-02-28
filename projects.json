@@ -1,26 +1,61 @@
 [
   {
-    "name": "Advice Generator",
-    "img": {
-      "main": "/projects/advice-gen/main.png"
-    },
-    "tags": ["Vue Js", "CSS"],
-    "link": "https://advice-jen.netlify.app/"
-  },
-  {
-    "name": "Social Media Dashboard",
-    "img": {
-      "main": "/projects/social-dash/main.png"
-    },
-    "tags": ["HTML", "CSS", "Javascript"],
-    "link": "https://social-card-d.netlify.app/"
-  },
-  {
-    "name": "Static Job Listing Website",
-    "img": {
-      "main": "/projects/static-job/main.png"
-    },
-    "tags": ["Vue Js", "Tailwind CSS"],
-    "link": "https://static-listing.netlify.app/"
+    "category": "web development",
+    "projects": [
+      {
+        "name": "Advice Generator",
+        "img": {
+          "main": "/projects/advice-gen/main.png"
+        },
+        "tags": ["Vue Js", "CSS"],
+        "link": "https://advice-jen.netlify.app/",
+        "code_link": "https://github.com/folorunsho-tech/advice-gen"
+      },
+      {
+        "name": "Social Media Dashboard",
+        "img": {
+          "main": "/projects/social-dash/main.png"
+        },
+        "tags": ["HTML", "CSS", "Javascript"],
+        "link": "https://social-card-d.netlify.app/",
+        "code_link": "https://github.com/folorunsho-tech/social-card"
+      },
+      {
+        "name": "Static Job Listing Website",
+        "img": {
+          "main": "/projects/static-job/main.png"
+        },
+        "tags": ["Vue Js", "Tailwind CSS"],
+        "link": "https://static-listing.netlify.app/",
+        "code_link": "https://github.com/folorunsho-tech/static-job-listing"
+      },
+      {
+        "name": "Invoicly - React UI",
+        "img": {
+          "main": "/projects/invoicly/main.png"
+        },
+        "tags": ["React Js", "CSS", "Chakra UI"],
+        "link": "https://invoicly.netlify.app/",
+        "code_link": "https://github.com/folorunsho-tech/invoicly"
+      },
+      {
+        "name": "Sunnyside",
+        "img": {
+          "main": "/projects/sunnyside/main.png"
+        },
+        "tags": ["HTML", "CSS"],
+        "link": "https://sunyysidefr.netlify.app/",
+        "code_link": "https://github.com/folorunsho-tech/Sunnyside"
+      },
+      {
+        "name": "GreenPie - Recipe App",
+        "img": {
+          "main": "/projects/greenpie/main.png"
+        },
+        "tags": ["Javascript", "SCSS", "HTML"],
+        "link": "https://green-pie.netlify.app/",
+        "code_link": "https://github.com/folorunsho-tech/GreenPie"
+      }
+    ]
   }
 ]
