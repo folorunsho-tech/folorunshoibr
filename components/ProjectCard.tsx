@@ -51,7 +51,7 @@ const ProjectCard = ({ img, name, tags, link, category }: ProjectCardProps) => {
         >
           View Project
         </Link>
-        {category === "webdevelopment" && (
+        {category === "web-development" && (
           <Link
             href={link}
             target="_blank"
