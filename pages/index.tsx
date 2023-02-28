@@ -1,3 +1,4 @@
+import * as React from "react";
 import Head from "next/head";
 import useSWR from "swr";
 import axios from "axios";
@@ -10,10 +11,11 @@ import {
   FaGithubSquare,
   FaCopyright,
 } from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
-// import NavSlider from "@/components/NavSlider";
 import ProjectCard from "@/components/ProjectCard";
 import Loader from "@/components/Loader";
+import NavSlider from "@/components/NavSlider";
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800", "900"],
   style: "normal",
@@ -24,10 +26,30 @@ const oswald = Oswald({
   style: "normal",
   subsets: ["latin"],
 });
+const categories = [
+  "web-development",
+  // "flutter-development",
+  // "data-analysis",
+  // "cloud-engineering",
+  // "cybersecurity",
+  // "machine-learning-&-ai",
+  // "iot-engineering",
+];
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 export default function Home() {
+  const [category, setCategoy] = React.useState("web-development");
   const route = useRouter().asPath;
-  const { data, error, isLoading } = useSWR("/api/projects", fetcher);
+  const { data, error, isLoading } = useSWR(
+    `/api/projects/${category}`,
+    fetcher
+  );
+  const handleChange = async (
+    event: React.SyntheticEvent,
+    newValue: string
+  ) => {
+    const current = event.target?.innerText.toLowerCase();
+    setCategoy(current);
+  };
 
   return (
     <>
@@ -100,7 +122,9 @@ export default function Home() {
                 : "border-b border-b-transparent pb-1 hover:border-b-purple-500 transition duration-150"
             }
           >
-            <Link href="#blog">Blog</Link>
+            <Link href="https://tacheyon.hashnode.dev/" target="_blank">
+              Blog
+            </Link>
           </li>
           {/* <li className={route=='/#projects'?'border-b border-b-purple-700 pb-1':'border-b border-b-transparent pb-1'}><Link href='#about-me'>About Me</Link>/li> */}
           <li
@@ -139,7 +163,11 @@ export default function Home() {
       </header>
       <main className={`${poppins.className} p-4 space-y-4 md:px-12 lg:px-20`}>
         <h2 className="text-2xl">Projects</h2>
-        {/* <NavSlider /> */}
+        <NavSlider
+          categories={categories}
+          handleChange={handleChange}
+          value={category}
+        />
         <hr className="border-purple-400" />
         <section
           className="md:grid md:grid-cols-2 md:gap-6 flex flex-col gap-8"
@@ -156,11 +184,11 @@ export default function Home() {
             </>
           )}
           {!isLoading &&
-            data[0].projects?.map((project: any) => (
+            data.projects?.map((project: any, index: number) => (
               <ProjectCard
-                key={project?.name}
+                key={project.name}
                 {...project}
-                category={data[0].category}
+                category={data.category}
               />
             ))}
         </section>
