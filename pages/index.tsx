@@ -28,7 +28,6 @@ const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 export default function Home() {
   const route = useRouter().asPath;
   const { data, error, isLoading } = useSWR("/api/projects", fetcher);
-  console.log(data);
 
   return (
     <>
