@@ -32,6 +32,7 @@ const oswald = Oswald({
 // "cybersecurity",
 // "machine-learning-&-ai",
 // "iot-engineering",
+const categories = ["web-development", "flutter-development"];
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 export default function Home() {
   const [category, setCategoy] = React.useState("web-development");
@@ -40,13 +41,13 @@ export default function Home() {
     `/api/projects/${category}`,
     fetcher
   );
-  const categories = ["web-development"];
 
   const handleChange = async (
     event: React.SyntheticEvent,
     newValue: string
   ) => {
-    const current = event.target?.innerText.toLowerCase();
+    const current = event.currentTarget.innerHTML;
+
     setCategoy(current);
   };
 
