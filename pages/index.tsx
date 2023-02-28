@@ -32,7 +32,7 @@ const oswald = Oswald({
 // "cybersecurity",
 // "machine-learning-&-ai",
 // "iot-engineering",
-const categories = ["web-development", "flutter-development"];
+const categories = ["web-development"];
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 export default function Home() {
   const [category, setCategoy] = React.useState("web-development");
