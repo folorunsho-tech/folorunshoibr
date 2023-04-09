@@ -37,7 +37,7 @@ const ProjectCard = ({ img, name, tags, link, category }: ProjectCardProps) => {
       />
       <h2 className={`${oswald.className} text-3xl capitalize`}>{name}</h2>
       <p
-        className={`${poppins.className} flex gap-4 items-center text-lg text-gray-400 pb-4`}
+        className={`${poppins.className} uppercase flex gap-4 items-center text-lg text-gray-400 pb-4`}
       >
         {tags.map((tag) => (
           <span>{tag}</span>
